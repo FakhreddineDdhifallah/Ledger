@@ -5,29 +5,16 @@ import { PaperProvider, MD3DarkTheme } from 'react-native-paper';
 import { StatusBar } from 'expo-status-bar';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { View, Text } from 'react-native';
-
+import Dashboard from './app/Dashboard';
+import AddTransaction from './app/AddTransaction';
+import History from './app/History';
 import SplashScreen from './app/SplashScreen';
 import { COLORS } from './constants/theme';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 
-// Temporary inline screens until we build the real ones
-const Dashboard = () => (
-  <View style={{ flex: 1, backgroundColor: '#0A0A0C', alignItems: 'center', justifyContent: 'center' }}>
-    <Text style={{ color: '#F0F0F5' }}>Dashboard</Text>
-  </View>
-);
-const AddTransaction = () => (
-  <View style={{ flex: 1, backgroundColor: '#0A0A0C', alignItems: 'center', justifyContent: 'center' }}>
-    <Text style={{ color: '#F0F0F5' }}>Add Transaction</Text>
-  </View>
-);
-const History = () => (
-  <View style={{ flex: 1, backgroundColor: '#0A0A0C', alignItems: 'center', justifyContent: 'center' }}>
-    <Text style={{ color: '#F0F0F5' }}>History</Text>
-  </View>
-);
+
 
 const theme = {
   ...MD3DarkTheme,
